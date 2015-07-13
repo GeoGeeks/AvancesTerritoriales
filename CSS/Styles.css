@@ -1,0 +1,158 @@
+html,
+body {
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+#map {
+   margin: 0;
+   padding: 0;
+}
+#HomeButton {
+  position: absolute;
+  bottom: 110px;
+  left: 20px;
+  z-index: 30;
+}
+#mapSector{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#menu{
+  width: 100%;
+  position: absolute;
+  z-index: 40;
+  pointer-events: none;
+}
+
+#menuFiltros{
+  float: left;
+  margin: 20px;
+  pointer-events: all;
+}
+
+#menuLeyenda{
+  float: right;
+  margin: 20px;
+  pointer-events: all; 
+}
+
+#feedback {
+  display: none;
+  height: 240px;
+  font-family: AvenirRegular;
+  font-size: 14px;
+  z-index: 40;
+  background: #fff;
+  color: #444;
+  width: 240px;
+  right: 30px;
+  bottom: 55px;
+  box-shadow: 5px 5px 5px #474747;
+}
+
+#mostrarFeedback{
+  width: 240px;
+  height: 30px;
+  background-color: rgb(146,25,32);
+  z-index: 50;
+  bottom: 30px;
+  right: 65px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-family: AvenirRegular;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #474747;
+}
+
+#legendWrapper {
+   padding: 20px 0 0 0;
+}
+
+#divFiltros{
+  display: none;
+  z-index: 10;
+  width: 240px;
+  background-color: rgba(146,25,32,0.8);
+  left: 20px;
+  top: 250px;
+  box-shadow: 5px 5px 5px #474747;
+}
+
+#mostrarFiltros{
+  z-index: 10;
+  cursor: pointer;
+  width: 240px;
+  height: 30px;
+  background-color: rgb(146,25,32);
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-family: AvenirRegular;
+  font-size: 14px;
+  box-shadow: 5px 5px 5px #474747;
+}
+
+#ocultarFiltros{
+  height: 20px;
+  float: right;
+}
+
+#divFiltros h2{
+  font-family: AvenirRegular;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+select{
+  font-family: AvenirRegular;
+  width: 200px;
+  margin: 10px;
+}
+
+@font-face{
+ font-family: AvenirBold;
+ src: url(../Fonts/Avenir/AvenirNextLTPro-Bold.otf);
+}
+
+@font-face{
+ font-family: AvenirRegular;
+ src: url(../Fonts/Avenir/AvenirNextLTPro-Regular.otf);
+}
+
+@media screen and (max-width: 580px){
+  #menu{
+    height: 100%;
+  }
+  
+  #mostrarFiltros{
+    width: 100%;
+  }
+  #menuFiltros{
+    width: 100%;
+    margin: 0;
+  }
+  #divFiltros{
+    width: 100%;
+  }
+
+  #menuLeyenda{
+    width: 100%;
+    margin: 0;
+  }
+
+  #mostrarFeedback{
+    width: 100%;
+  }
+
+  #feedback{
+    width: 100%;
+  }
+}

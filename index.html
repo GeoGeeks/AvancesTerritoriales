@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+  <title>Seguimiento Territorial</title>
+  <link rel="stylesheet" href="//js.arcgis.com/3.13/dijit/themes/tundra/tundra.css">
+  <link rel="stylesheet" href="//js.arcgis.com/3.13/esri/css/esri.css">
+   
+  <link rel="stylesheet" href="CSS/Styles.css" type="text/css"/>
+  <script type="text/javascript" src="JS/jquery-1.3.2.js"></script>
+
+  <script src="//js.arcgis.com/3.13/"></script>
+  <script type="text/javascript" src="JS/map.js"></script>
+</head>
+
+<body class="tundra" onload = "cargarSector()">
+  <div id = "mapSector">
+   <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'headline',gutters:false" style="width: 100%; height: 100%; margin: 0; position: relative; margin-left: auto; margin-right: auto;">
+      <div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'">
+        <div id="HomeButton"></div>
+        <div id="menu">
+          <div id="menuFiltros">
+            <div id="mostrarFiltros" onclick="mostrarFiltros()" >Mostrar Filtros</div>
+
+            <div id = "divFiltros">
+            <h2>Indicador Base</h2>
+            <select id = "SelectorIndicadorBase">
+              <option value ="0" selected>Población</option> 
+              <option value ="1">Población joven</option>
+              <option value ="2">PIB</option>
+              <option value ="3">PIB per cápita</option>
+              <!--
+              <option>Participación PIB</option>
+              -->
+            </select>
+            <select id = "SelectorPeriodoIndicadorBase">
+            </select>
+            <h2>Filtros</h2>
+            <select id="selectSector" onchange = "cargarIndicador()"></select>
+            <select id="selectIndicador" onchange = "cargarPeriodo()"></select>
+            <select id="selectPeriodo" onchange="cargarValores()"></select>
+          </div>
+
+          </div>
+            <div id="menuLeyenda">
+              <div id="mostrarFeedback" onclick="mostrarFeedback()">
+              Leyenda
+            </div>
+
+            <div id="feedback">
+              <div id="legendWrapper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+  </div>
+</body>
+
+</html>
+
+
